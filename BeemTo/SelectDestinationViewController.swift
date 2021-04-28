@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Network
 
-protocol SelectDestinationViewControllerDelegate: class {
+protocol SelectDestinationViewControllerDelegate: AnyObject {
     func selected(destination: NWBrowser.Result)
 }
 

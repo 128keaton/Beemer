@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "MenuBarIcon.svg",
+      "filename" : "MenuBarIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "MenuBarIcon-1.svg",
+      "filename" : "MenuBarIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

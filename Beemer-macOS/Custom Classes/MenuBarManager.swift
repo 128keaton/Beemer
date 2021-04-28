@@ -17,7 +17,7 @@ class MenuBarManager: NSObject {
     var popoverVC: ViewController?
 
     let menuBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    let menuBarIcon = NSImage(named: "NSTouchBarOpenInBrowserTemplate")
+    let menuBarIcon = NSImage(named: "MenuBarIcon")
 
 
     override init() {
