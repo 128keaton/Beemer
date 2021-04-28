@@ -6,20 +6,291 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8A1A6B942628ADCA00270720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A6B932628ADCA00270720 /* AppDelegate.swift */; };
+		8A1A6B962628ADCA00270720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A6B952628ADCA00270720 /* SceneDelegate.swift */; };
+		8A1A6B982628ADCA00270720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A6B972628ADCA00270720 /* ViewController.swift */; };
+		8A1A6B9B2628ADCA00270720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6B992628ADCA00270720 /* Main.storyboard */; };
+		8A1A6B9D2628ADCB00270720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6B9C2628ADCB00270720 /* Assets.xcassets */; };
+		8A1A6BA02628ADCB00270720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6B9E2628ADCB00270720 /* LaunchScreen.storyboard */; };
+		8A1A6BAD2628ADDC00270720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A6BAC2628ADDC00270720 /* AppDelegate.swift */; };
+		8A1A6BAF2628ADDC00270720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A6BAE2628ADDC00270720 /* ViewController.swift */; };
+		8A1A6BB12628ADDD00270720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6BB02628ADDD00270720 /* Assets.xcassets */; };
+		8A1A6BB42628ADDD00270720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6BB22628ADDD00270720 /* Main.storyboard */; };
+		8A621D34263766B200EB5942 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A621D33263766B200EB5942 /* ShareViewController.swift */; };
+		8A621D37263766B200EB5942 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A621D35263766B200EB5942 /* MainInterface.storyboard */; };
+		8A621D3B263766B200EB5942 /* BeemTo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A621D31263766B200EB5942 /* BeemTo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A621D4A26376A3400EB5942 /* SelectDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A621D4926376A3400EB5942 /* SelectDestinationViewController.swift */; };
+		8AE420AA26378C93003F428D /* Beemer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420A826378C93003F428D /* Beemer.xcdatamodeld */; };
+		8AE420AB26378C93003F428D /* Beemer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420A826378C93003F428D /* Beemer.xcdatamodeld */; };
+		8AE420AC26378C93003F428D /* Beemer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420A826378C93003F428D /* Beemer.xcdatamodeld */; };
+		8AE420AE26378D3B003F428D /* BeemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420AD26378D3B003F428D /* BeemItem.swift */; };
+		8AE420AF26378D3B003F428D /* BeemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420AD26378D3B003F428D /* BeemItem.swift */; };
+		8AE420B026378D3B003F428D /* BeemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420AD26378D3B003F428D /* BeemItem.swift */; };
+		8AE420C82637C52D003F428D /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420C72637C52D003F428D /* Browser.swift */; };
+		8AE420C92637C52D003F428D /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420C72637C52D003F428D /* Browser.swift */; };
+		8AE420CB2637C583003F428D /* NetServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420CA2637C583003F428D /* NetServiceType.swift */; };
+		8AE420CC2637C583003F428D /* NetServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420CA2637C583003F428D /* NetServiceType.swift */; };
+		8AE420CD2637C583003F428D /* NetServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420CA2637C583003F428D /* NetServiceType.swift */; };
+		8AE420CF2637CE08003F428D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420CE2637CE08003F428D /* Server.swift */; };
+		8AE420D126389BEB003F428D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE420D026389BEB003F428D /* MainMenu.xib */; };
+		8AE420D326389C16003F428D /* PinnablePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420D226389C16003F428D /* PinnablePopover.swift */; };
+		8AE420D626389C3B003F428D /* MenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE420D526389C3B003F428D /* MenuBarManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A621D39263766B200EB5942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A1A6B852628ADA900270720 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A621D30263766B200EB5942;
+			remoteInfo = BeemTo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A588A6626375B79009D9006 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A621D3B263766B200EB5942 /* BeemTo.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8A1A6B902628ADCA00270720 /* Beemer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beemer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1A6B932628ADCA00270720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A1A6B952628ADCA00270720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8A1A6B972628ADCA00270720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A1A6B9A2628ADCA00270720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A1A6B9C2628ADCB00270720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A1A6B9F2628ADCB00270720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A1A6BA12628ADCB00270720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A1A6BAA2628ADDC00270720 /* Beemer-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beemer-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1A6BAC2628ADDC00270720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A1A6BAE2628ADDC00270720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A1A6BB02628ADDD00270720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A1A6BB32628ADDD00270720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A1A6BB52628ADDD00270720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A1A6BB62628ADDD00270720 /* Beemer_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beemer_macOS.entitlements; sourceTree = "<group>"; };
+		8A1A6BC22628AE4700270720 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Network.framework; sourceTree = DEVELOPER_DIR; };
+		8A1A6BC82628AFF700270720 /* CocoaAsyncSocket.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaAsyncSocket.xcframework; path = Carthage/Build/CocoaAsyncSocket.xcframework; sourceTree = "<group>"; };
+		8A621D2B2637665500EB5942 /* Beemer-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Beemer-iOS.entitlements"; sourceTree = "<group>"; };
+		8A621D31263766B200EB5942 /* BeemTo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BeemTo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A621D33263766B200EB5942 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		8A621D36263766B200EB5942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8A621D38263766B200EB5942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A621D40263766C000EB5942 /* BeemTo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeemTo.entitlements; sourceTree = "<group>"; };
+		8A621D4926376A3400EB5942 /* SelectDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDestinationViewController.swift; sourceTree = "<group>"; };
+		8AE420A926378C93003F428D /* BeemItem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeemItem.xcdatamodel; sourceTree = "<group>"; };
+		8AE420AD26378D3B003F428D /* BeemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeemItem.swift; sourceTree = "<group>"; };
+		8AE420C72637C52D003F428D /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
+		8AE420CA2637C583003F428D /* NetServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetServiceType.swift; sourceTree = "<group>"; };
+		8AE420CE2637CE08003F428D /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		8AE420D026389BEB003F428D /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		8AE420D226389C16003F428D /* PinnablePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnablePopover.swift; sourceTree = "<group>"; };
+		8AE420D526389C3B003F428D /* MenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A1A6B8D2628ADCA00270720 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A1A6BA72628ADDC00270720 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A621D2E263766B200EB5942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		8A1A6B842628ADA900270720 = {
 			isa = PBXGroup;
 			children = (
+				8A1A6B8B2628ADAF00270720 /* Shared */,
+				8A1A6B922628ADCA00270720 /* Beemer-iOS */,
+				8A1A6BAB2628ADDC00270720 /* Beemer-macOS */,
+				8A621D32263766B200EB5942 /* BeemTo */,
+				8A1A6B912628ADCA00270720 /* Products */,
+				8A1A6BC12628AE4700270720 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
+		8A1A6B8B2628ADAF00270720 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8AE420A826378C93003F428D /* Beemer.xcdatamodeld */,
+				8AE420AD26378D3B003F428D /* BeemItem.swift */,
+				8AE420C72637C52D003F428D /* Browser.swift */,
+				8AE420CA2637C583003F428D /* NetServiceType.swift */,
+				8AE420CE2637CE08003F428D /* Server.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8A1A6B912628ADCA00270720 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A6B902628ADCA00270720 /* Beemer-iOS.app */,
+				8A1A6BAA2628ADDC00270720 /* Beemer-macOS.app */,
+				8A621D31263766B200EB5942 /* BeemTo.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A1A6B922628ADCA00270720 /* Beemer-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8A621D2B2637665500EB5942 /* Beemer-iOS.entitlements */,
+				8A1A6B932628ADCA00270720 /* AppDelegate.swift */,
+				8A1A6B952628ADCA00270720 /* SceneDelegate.swift */,
+				8A1A6B972628ADCA00270720 /* ViewController.swift */,
+				8A1A6B992628ADCA00270720 /* Main.storyboard */,
+				8A1A6B9C2628ADCB00270720 /* Assets.xcassets */,
+				8A1A6B9E2628ADCB00270720 /* LaunchScreen.storyboard */,
+				8A1A6BA12628ADCB00270720 /* Info.plist */,
+			);
+			path = "Beemer-iOS";
+			sourceTree = "<group>";
+		};
+		8A1A6BAB2628ADDC00270720 /* Beemer-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A6BAC2628ADDC00270720 /* AppDelegate.swift */,
+				8A1A6BAE2628ADDC00270720 /* ViewController.swift */,
+				8AE420D426389C2E003F428D /* Custom Classes */,
+				8A1A6BB02628ADDD00270720 /* Assets.xcassets */,
+				8A1A6BB22628ADDD00270720 /* Main.storyboard */,
+				8A1A6BB52628ADDD00270720 /* Info.plist */,
+				8A1A6BB62628ADDD00270720 /* Beemer_macOS.entitlements */,
+				8AE420D026389BEB003F428D /* MainMenu.xib */,
+			);
+			path = "Beemer-macOS";
+			sourceTree = "<group>";
+		};
+		8A1A6BC12628AE4700270720 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A6BC82628AFF700270720 /* CocoaAsyncSocket.xcframework */,
+				8A1A6BC22628AE4700270720 /* Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A621D32263766B200EB5942 /* BeemTo */ = {
+			isa = PBXGroup;
+			children = (
+				8A621D40263766C000EB5942 /* BeemTo.entitlements */,
+				8A621D33263766B200EB5942 /* ShareViewController.swift */,
+				8A621D35263766B200EB5942 /* MainInterface.storyboard */,
+				8A621D38263766B200EB5942 /* Info.plist */,
+				8A621D4926376A3400EB5942 /* SelectDestinationViewController.swift */,
+			);
+			path = BeemTo;
+			sourceTree = "<group>";
+		};
+		8AE420D426389C2E003F428D /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8AE420D226389C16003F428D /* PinnablePopover.swift */,
+				8AE420D526389C3B003F428D /* MenuBarManager.swift */,
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A1A6B8F2628ADCA00270720 /* Beemer-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A1A6BA22628ADCB00270720 /* Build configuration list for PBXNativeTarget "Beemer-iOS" */;
+			buildPhases = (
+				8A1A6B8C2628ADCA00270720 /* Sources */,
+				8A1A6B8D2628ADCA00270720 /* Frameworks */,
+				8A1A6B8E2628ADCA00270720 /* Resources */,
+				8A588A6626375B79009D9006 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A621D3A263766B200EB5942 /* PBXTargetDependency */,
+			);
+			name = "Beemer-iOS";
+			productName = "Beemer-iOS";
+			productReference = 8A1A6B902628ADCA00270720 /* Beemer-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A1A6BA92628ADDC00270720 /* Beemer-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A1A6BB72628ADDD00270720 /* Build configuration list for PBXNativeTarget "Beemer-macOS" */;
+			buildPhases = (
+				8A1A6BA62628ADDC00270720 /* Sources */,
+				8A1A6BA72628ADDC00270720 /* Frameworks */,
+				8A1A6BA82628ADDC00270720 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Beemer-macOS";
+			productName = "Beemer-macOS";
+			productReference = 8A1A6BAA2628ADDC00270720 /* Beemer-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A621D30263766B200EB5942 /* BeemTo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A621D3C263766B200EB5942 /* Build configuration list for PBXNativeTarget "BeemTo" */;
+			buildPhases = (
+				8A621D2D263766B200EB5942 /* Sources */,
+				8A621D2E263766B200EB5942 /* Frameworks */,
+				8A621D2F263766B200EB5942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeemTo;
+			productName = BeemTo;
+			productReference = 8A621D31263766B200EB5942 /* BeemTo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8A1A6B852628ADA900270720 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8A1A6B8F2628ADCA00270720 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					8A1A6BA92628ADDC00270720 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					8A621D30263766B200EB5942 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
 			};
 			buildConfigurationList = 8A1A6B882628ADA900270720 /* Build configuration list for PBXProject "Beemer" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -30,12 +301,135 @@
 				Base,
 			);
 			mainGroup = 8A1A6B842628ADA900270720;
+			productRefGroup = 8A1A6B912628ADCA00270720 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				8A1A6B8F2628ADCA00270720 /* Beemer-iOS */,
+				8A1A6BA92628ADDC00270720 /* Beemer-macOS */,
+				8A621D30263766B200EB5942 /* BeemTo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A1A6B8E2628ADCA00270720 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1A6BA02628ADCB00270720 /* LaunchScreen.storyboard in Resources */,
+				8A1A6B9D2628ADCB00270720 /* Assets.xcassets in Resources */,
+				8A1A6B9B2628ADCA00270720 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A1A6BA82628ADDC00270720 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1A6BB12628ADDD00270720 /* Assets.xcassets in Resources */,
+				8A1A6BB42628ADDD00270720 /* Main.storyboard in Resources */,
+				8AE420D126389BEB003F428D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A621D2F263766B200EB5942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A621D37263766B200EB5942 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A1A6B8C2628ADCA00270720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE420CB2637C583003F428D /* NetServiceType.swift in Sources */,
+				8AE420AE26378D3B003F428D /* BeemItem.swift in Sources */,
+				8AE420C82637C52D003F428D /* Browser.swift in Sources */,
+				8A1A6B982628ADCA00270720 /* ViewController.swift in Sources */,
+				8A1A6B942628ADCA00270720 /* AppDelegate.swift in Sources */,
+				8AE420AA26378C93003F428D /* Beemer.xcdatamodeld in Sources */,
+				8A1A6B962628ADCA00270720 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A1A6BA62628ADDC00270720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE420CC2637C583003F428D /* NetServiceType.swift in Sources */,
+				8AE420D326389C16003F428D /* PinnablePopover.swift in Sources */,
+				8AE420D626389C3B003F428D /* MenuBarManager.swift in Sources */,
+				8A1A6BAF2628ADDC00270720 /* ViewController.swift in Sources */,
+				8A1A6BAD2628ADDC00270720 /* AppDelegate.swift in Sources */,
+				8AE420AF26378D3B003F428D /* BeemItem.swift in Sources */,
+				8AE420CF2637CE08003F428D /* Server.swift in Sources */,
+				8AE420AB26378C93003F428D /* Beemer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A621D2D263766B200EB5942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A621D4A26376A3400EB5942 /* SelectDestinationViewController.swift in Sources */,
+				8A621D34263766B200EB5942 /* ShareViewController.swift in Sources */,
+				8AE420C92637C52D003F428D /* Browser.swift in Sources */,
+				8AE420B026378D3B003F428D /* BeemItem.swift in Sources */,
+				8AE420CD2637C583003F428D /* NetServiceType.swift in Sources */,
+				8AE420AC26378C93003F428D /* Beemer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A621D3A263766B200EB5942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A621D30263766B200EB5942 /* BeemTo */;
+			targetProxy = 8A621D39263766B200EB5942 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A1A6B992628ADCA00270720 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A1A6B9A2628ADCA00270720 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A1A6B9E2628ADCB00270720 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A1A6B9F2628ADCB00270720 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8A1A6BB22628ADDD00270720 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A1A6BB32628ADDD00270720 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A621D35263766B200EB5942 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A621D36263766B200EB5942 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A1A6B892628ADA900270720 /* Debug */ = {
@@ -47,6 +441,443 @@
 		8A1A6B8A2628ADA900270720 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+			};
+			name = Release;
+		};
+		8A1A6BA32628ADCB00270720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Beemer-iOS/Beemer-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 52B5TC74Y7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Beemer-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kbrleson.Beemer-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A1A6BA42628ADCB00270720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Beemer-iOS/Beemer-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 52B5TC74Y7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Beemer-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kbrleson.Beemer-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A1A6BB82628ADDD00270720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Beemer-macOS/Beemer_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 52B5TC74Y7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Beemer-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MARKETING_VERSION = 1.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kbrleson.Beemer-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8A1A6BB92628ADDD00270720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Beemer-macOS/Beemer_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 52B5TC74Y7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Beemer-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MARKETING_VERSION = 1.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kbrleson.Beemer-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8A621D3D263766B200EB5942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = BeemTo/BeemTo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 52B5TC74Y7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BeemTo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kbrleson.Beemer-iOS.BeemTo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A621D3E263766B200EB5942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = BeemTo/BeemTo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 52B5TC74Y7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BeemTo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kbrleson.Beemer-iOS.BeemTo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -62,7 +893,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8A1A6BA22628ADCB00270720 /* Build configuration list for PBXNativeTarget "Beemer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1A6BA32628ADCB00270720 /* Debug */,
+				8A1A6BA42628ADCB00270720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A1A6BB72628ADDD00270720 /* Build configuration list for PBXNativeTarget "Beemer-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1A6BB82628ADDD00270720 /* Debug */,
+				8A1A6BB92628ADDD00270720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A621D3C263766B200EB5942 /* Build configuration list for PBXNativeTarget "BeemTo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A621D3D263766B200EB5942 /* Debug */,
+				8A621D3E263766B200EB5942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8AE420A826378C93003F428D /* Beemer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8AE420A926378C93003F428D /* BeemItem.xcdatamodel */,
+			);
+			currentVersion = 8AE420A926378C93003F428D /* BeemItem.xcdatamodel */;
+			path = Beemer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8A1A6B852628ADA900270720 /* Project object */;
 }
