@@ -26,7 +26,7 @@ class Server {
 
         self.listener = try! NWListener(using: params)
 
-        self.listener?.service = NWListener.Service(name: "Yerba Buena",
+        self.listener?.service = NWListener.Service(name: Host.current().localizedName!,
             type: NetServiceType)
 
         self.listener?.stateUpdateHandler = { newState in

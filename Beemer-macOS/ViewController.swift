@@ -13,6 +13,7 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
     @IBOutlet var tableView: NSTableView?
     @IBOutlet var countLabel: NSTextField?
     @IBOutlet var headerView: NSView?
+    @IBOutlet var titleLabel: NSTextField?
 
     public var popover: PinnablePopover?
     public var appDelegate: AppDelegate?
@@ -54,6 +55,12 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let hostname = Host.current().localizedName {
+            self.titleLabel?.stringValue = "Beemer - \(hostname)"
+        } else {
+            self.titleLabel?.stringValue = "Beemer"
+        }
 
         self.dataSource = NSTableViewDiffableDataSource<Int, NSManagedObjectID>(tableView: self.tableView!) { tableView, column, indexPath, objectID in
             guard let beemItem = self.appDelegate?.persistentContainer.viewContext.object(with: objectID) else {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -209,7 +209,7 @@
                                         <rect key="frame" x="203" y="11" width="57" height="19"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Beemer" id="w51-lf-hNK">
                                             <font key="font" textStyle="title3" name=".SFNS-Regular"/>
-                                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
@@ -247,6 +247,7 @@
                         <outlet property="countLabel" destination="R1T-gf-VJG" id="mwt-6X-5kR"/>
                         <outlet property="headerView" destination="Axx-7V-q2f" id="2rF-eI-sV5"/>
                         <outlet property="tableView" destination="Ijm-cb-38w" id="Mmg-Sh-U0r"/>
+                        <outlet property="titleLabel" destination="MSf-gC-2SX" id="OpP-Do-Sj5"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
