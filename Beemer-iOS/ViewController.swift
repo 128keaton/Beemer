@@ -72,9 +72,16 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
             return cell
         }
 
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
         self.tableView.dataSource = self.dataSource
         self.browser = Browser.init()
         self.browser?.delegate = self
+    }
+    
+    @objc func appMovedToForeground() {
+        self.performFetch()
     }
 
     func currentCount() -> Int {
@@ -102,7 +109,6 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
             }
             
             try appDelegate.persistentContainer.viewContext.save()
-            self.title = "History - \(self.totalCount())"
         } catch let error {
             print("Detele all data in \(entity) error :", error)
         }
@@ -178,6 +184,7 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
     
     @IBAction func clearItems() {
         self.deleteAllData("BeemItem")
+        self.title = "History - 0"
     }
 
     func showActionAlert(item: BeemItem) {
