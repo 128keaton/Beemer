@@ -51,6 +51,7 @@ class Browser: NSObject, NetServiceBrowserDelegate {
         // Used to browse for discovered endpoints.
         self.nwBrowser?.browseResultsChangedHandler = { results, changes in
             self.delegate?.devicesChanged(devices: results.map({ (r) -> NWBrowser.Result in
+                print(r)
                 return r
             }))
         }
@@ -65,6 +66,7 @@ class Browser: NSObject, NetServiceBrowserDelegate {
         let params = NWParameters(dtls: nil, udp: udpOption)
         params.includePeerToPeer = true
 
+        // NWConnection(host: "10.0.1.10", port: 60316, using: params)
         self.currentConnection = NWConnection(to: nwEndpoint, using: params)
         self.currentConnection?.stateUpdateHandler = { newState in
 

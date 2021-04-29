@@ -155,11 +155,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 extension AppDelegate: ServerDelegate {
-    func itemReceived(item: BeemItem?, error: Error?) {
+    func jsonItemReceived(item: JSONBeemItem) {
+        let managedContext = self.persistentContainer.viewContext
+        let beemItem = BeemItem.fromJSON(item, context: managedContext)
+        
+        self.handleItemReceived(item: beemItem)
+    }
+    
+    func itemReceived(item: BeemItem?) {
         if let item = item {
             self.handleItemReceived(item: item)
-        } else if let error = error {
-            print("Error! \(error.localizedDescription)")
         }
     }
 }

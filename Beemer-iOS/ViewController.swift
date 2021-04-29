@@ -243,7 +243,7 @@ extension ViewController: BrowserDelegate {
 
         print(self.devices)
 
-        if self.currentAlert != nil {
+        if self.currentAlert != nil && self.selectedItem != nil {
             self.currentAlert?.dismiss(animated: true, completion: {
                 self.showActionAlert(item: self.selectedItem!)
             })
@@ -251,7 +251,8 @@ extension ViewController: BrowserDelegate {
     }
 
     func connectionReady() {
-        print("connectionReady: \(self.selectedItem!)")
+        guard let selectedItem = self.selectedItem else { return }
+        print("connectionReady: \(selectedItem)")
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -259,7 +260,7 @@ extension ViewController: BrowserDelegate {
 
 
         let managedContext = appDelegate.persistentContainer.viewContext
-        let item = BeemItem(message: self.selectedItem?.message ?? "", url: self.selectedItem?.url ?? "", source: UIDevice.current.name, on: Date(), context: managedContext)
+        let item = BeemItem(message: selectedItem.message ?? "", url: selectedItem.url ?? "", source: UIDevice.current.name, on: Date(), context: managedContext)
         self.browser?.send(item: item)
     }
 

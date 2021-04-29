@@ -9,7 +9,8 @@ import Foundation
 import Network
 
 protocol ServerDelegate {
-    func itemReceived(item: BeemItem?, error: Error?)
+    func itemReceived(item: BeemItem?)
+    func jsonItemReceived(item: JSONBeemItem)
 }
 
 class Server {
@@ -34,6 +35,7 @@ class Server {
             case .ready:
                 if let port = self.listener?.port {
                     print("Listener active on port: \(port)")
+                    print(self.listener)
                     // Listener setup on a port.  Active browsing for this service.
                 }
             case .failed(let error):
@@ -88,14 +90,34 @@ class Server {
                 return
             }
             if let data = data {
-         
+
+                do {
                     NSKeyedUnarchiver.setClass(BeemItem.self, forClassName: "BeemItem")
-                    if let beemItem = (try! NSKeyedUnarchiver.unarchivedObject(ofClass: BeemItem.self, from: data)) {
+                    if let beemItem = (try NSKeyedUnarchiver.unarchivedObject(ofClass: BeemItem.self, from: data)) {
                         print("Item received: \(beemItem)")
-                        self.delegate?.itemReceived(item: beemItem, error: nil)
+                        self.delegate?.itemReceived(item: beemItem)
                     }
-               
+                } catch {
+                    if error.localizedDescription == "The data couldn’t be read because it isn’t in the correct format." {
+                        print("Parsing JSON data")
+                        self.processJSONData(data: data)
+                    }
+                }
+
             }
         })
+    }
+
+    private func processJSONData(data: Data) {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .millisecondsSince1970
+        do {
+            let jsonBeemItem = try decoder.decode(JSONBeemItem.self, from: data)
+            print("Item received: \(jsonBeemItem)")
+            self.delegate?.jsonItemReceived(item: jsonBeemItem)
+
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

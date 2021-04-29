@@ -94,9 +94,19 @@ class BeemItem: NSManagedObject, Codable, NSCoding, NSSecureCoding {
         coder.encode(self.source, forKey: "source")
         coder.encode(self.on ?? Date() as NSDate, forKey: "on")
     }
-
+    
+    static func fromJSON(_ json: JSONBeemItem, context: NSManagedObjectContext) -> BeemItem {
+        return BeemItem(message: json.message, url: json.url, source: json.source, on: json.on, context: context)
+    }
 }
 
 extension CodingUserInfoKey {
     static let context = CodingUserInfoKey(rawValue: "context")
+}
+
+struct JSONBeemItem: Decodable {
+    let url: String
+    let message: String
+    let source: String
+    let on: Date
 }
