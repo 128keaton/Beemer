@@ -11,13 +11,13 @@
                 <outlet property="delegate" destination="Ffw-35-6Hm" id="Cle-qq-9dZ"/>
             </connections>
         </customObject>
-        <customObject id="Ffw-35-6Hm" customClass="AppDelegate" customModule="Beemer_macOS" customModuleProvider="target">
+        <customObject id="Ffw-35-6Hm" customClass="AppDelegate" customModule="Beemer" customModuleProvider="target">
             <connections>
                 <outlet property="menuBarManager" destination="api-b0-TCt" id="1Og-Hq-fr6"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="api-b0-TCt" customClass="MenuBarManager" customModule="Beemer_macOS" customModuleProvider="target">
+        <customObject id="api-b0-TCt" customClass="MenuBarManager" customModule="Beemer" customModuleProvider="target">
             <connections>
                 <outlet property="appDelegate" destination="Ffw-35-6Hm" id="s0h-Sn-QCW"/>
             </connections>

@@ -20,37 +20,37 @@ class ShareViewController: SLComposeServiceViewController {
 
     var devices: [NWBrowser.Result] = []
     var currentItem: BeemItem?
-    
+
     lazy var persistentContainer: NSPersistentContainer = {
-       /*
+        /*
         The persistent container for the application. This implementation
         creates and returns a container, having loaded the store for the
         application to it. This property is optional since there are legitimate
         error conditions that could cause the creation of the store to fail.
         */
-       let container = NSPersistentContainer(name: "Beemer")
+        let container = NSPersistentContainer(name: "Beemer")
 
-       let appName: String = "Beemer"
-       var persistentStoreDescriptions: NSPersistentStoreDescription
+        let appName: String = "Beemer"
+        var persistentStoreDescriptions: NSPersistentStoreDescription
 
-       let storeUrl =  FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.kbrleson.beemer")!.appendingPathComponent("Beemer.sqlite")
+        let storeUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.kbrleson.beemer")!.appendingPathComponent("Beemer.sqlite")
 
 
-       let description = NSPersistentStoreDescription()
-       description.shouldInferMappingModelAutomatically = true
-       description.shouldMigrateStoreAutomatically = true
-       description.url = storeUrl
+        let description = NSPersistentStoreDescription()
+        description.shouldInferMappingModelAutomatically = true
+        description.shouldMigrateStoreAutomatically = true
+        description.url = storeUrl
 
-       container.persistentStoreDescriptions = [NSPersistentStoreDescription(url:  FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.kbrleson.beemer")!.appendingPathComponent("Beemer.sqlite"))]
+        container.persistentStoreDescriptions = [NSPersistentStoreDescription(url: FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.kbrleson.beemer")!.appendingPathComponent("Beemer.sqlite"))]
 
-       container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-           if let error = error as NSError? {
-               fatalError("Unresolved error \(error), \(error.userInfo)")
-           }
-       })
-       return container
-   }()
-    
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,7 +77,7 @@ class ShareViewController: SLComposeServiceViewController {
                 })
             }
         }
-        
+
         for item in (self.navigationController?.navigationBar.items)! {
             if let rightItem = item.rightBarButtonItem {
                 rightItem.title = "Beem"
@@ -86,36 +86,34 @@ class ShareViewController: SLComposeServiceViewController {
         }
     }
 
-    
+
     override func isContentValid() -> Bool {
         if (urlString != nil || textString != nil) && self.selectedDestination != nil {
-            if !contentText.isEmpty {
-                return true
-            }
+            return true
         }
-        
+
         return false
     }
 
     override func didSelectPost() {
         NSKeyedArchiver.setClassName("BeemItem", for: BeemItem.self)
-        
+
         let managedContext = self.persistentContainer.viewContext
         self.currentItem = BeemItem(message: self.textString ?? self.contentText, url: self.urlString!, source: UIDevice.current.name, on: Date(), context: managedContext)
-      
-        
+
+
         do {
             try managedContext.save()
-          } catch let error as NSError {
+        } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
-          }
-        
+        }
+
         guard let destination = self.selectedDestination?.endpoint else {
             return
         }
-        
+
         self.browser?.establishConnection(with: destination)
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             super.didSelectPost()
         }
@@ -140,15 +138,15 @@ class ShareViewController: SLComposeServiceViewController {
         if self.selectedDestination == nil {
             self.selectedDestination = self.devices.first
         }
-        
+
         self.reloadConfigurationItems()
     }
-    
+
     private func formatName(endpoint: NWEndpoint?) -> String? {
         if let endpoint = endpoint {
             return "\(endpoint)".replacingOccurrences(of: "._beemer._udplocal.", with: "")
         }
-        
+
         return nil
     }
 }

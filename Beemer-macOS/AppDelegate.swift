@@ -12,7 +12,7 @@ import UserNotifications
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet var menuBarManager: MenuBarManager?
-    
+
     var canSendNotifications = false
     var server: Server?
 
@@ -79,8 +79,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func displayNotification(forItem item: BeemItem) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "Beemer"
-        notificationContent.subtitle = "\(item.source ?? "Anonymous") sent:"
-        notificationContent.body = item.message ?? item.url ?? ""
+
+        if let message = item.message, message.count > 0 {
+            notificationContent.subtitle = "\(item.source ?? "Anonymous") sent:"
+            notificationContent.body = message
+        } else if let url = item.url, url.count > 0 {
+            notificationContent.subtitle = "\(item.source ?? "Anonymous") sent:"
+            notificationContent.body = url
+        }
+        
         notificationContent.badge = 1
         notificationContent.categoryIdentifier = "newItemSentCategory"
         notificationContent.userInfo["objectID"] = item.objectID.uriRepresentation().absoluteString
@@ -100,19 +107,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func handleItemReceived(item: BeemItem) {
         let managedContext = self.persistentContainer.viewContext
-        let newItem = item.cloneWithContext(context: managedContext)
-
         do {
             try managedContext.save()
 
+
             if self.canSendNotifications {
-                self.displayNotification(forItem: newItem)
+                self.displayNotification(forItem: item)
             }
 
             print("Saved")
         } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+            print("Error saving: \(error.localizedDescription)")
         }
+
     }
 
     func openURLForObjectID(objectID: String) {

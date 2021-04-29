@@ -56,7 +56,7 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
         super.viewDidLoad()
 
         self.dataSource = NSTableViewDiffableDataSource<Int, NSManagedObjectID>(tableView: self.tableView!) { tableView, column, indexPath, objectID in
-            guard let beemItem = try? self.appDelegate?.persistentContainer.viewContext.existingObject(with: objectID) else {
+            guard let beemItem = self.appDelegate?.persistentContainer.viewContext.object(with: objectID) else {
                 fatalError("Managed object should be available")
             }
 
@@ -147,6 +147,16 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
         NSApp.orderFrontStandardAboutPanel(self)
     }
 
+    @objc func clear() {
+        self.deleteAllData("BeemItem")
+        do {
+            try fetchedCountController.performFetch()
+            self.updateView()
+        } catch {
+            print("Could not fetch. \(error), \(error.localizedDescription)")
+        }
+    }
+
     func updateView() {
         DispatchQueue.main.async {
             self.countLabel?.stringValue = "\(self.totalCount()) \(self.totalCount() == 1 ? "item" : "items")"
@@ -162,8 +172,12 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
         let aboutItem = NSMenuItem(title: "About", action: #selector(self.showAbout), keyEquivalent: "")
         aboutItem.target = self
 
+        let clearItem = NSMenuItem(title: "Clear", action: #selector(self.clear), keyEquivalent: "")
+        clearItem.target = self
+
         self.optionsMenu.addItem(quitItem)
         self.optionsMenu.addItem(aboutItem)
+        self.optionsMenu.addItem(clearItem)
 
         let location = NSPoint(x: 0, y: sender.frame.height + 5) // Magic number to adjust the height.
         self.optionsMenu.popUp(positioning: nil, at: location, in: sender)
@@ -181,8 +195,20 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
         return self.currentCount()
     }
 
-    private func buildCell() {
-
+    func deleteAllData(_ entity: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try self.appDelegate!.persistentContainer.viewContext.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else { continue }
+                self.appDelegate!.persistentContainer.viewContext.delete(objectData)
+            }
+            
+            try self.appDelegate!.persistentContainer.viewContext.save()
+        } catch let error {
+            print("Detele all data in \(entity) error :", error)
+        }
     }
 
     private func createCell(item: BeemItem, tableColumn: NSTableColumn) -> NSTableCellView {
@@ -194,7 +220,13 @@ class ViewController: NSViewController, UNUserNotificationCenterDelegate, NSTabl
             switch column {
             case 0:
                 cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "messageCell"), owner: self) as? NSTableCellView
-                cell!.textField?.stringValue = item.message ?? ""
+                if let message = item.message, message.count > 0 {
+                    cell!.textField?.stringValue = message
+                } else if let source = item.source {
+                    cell!.textField?.stringValue = source
+                } else {
+                    cell!.textField?.stringValue = "Unknown"
+                }
             case 1:
                 cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "urlCell"), owner: self) as? NSTableCellView
                 cell!.textField?.stringValue = item.url ?? ""

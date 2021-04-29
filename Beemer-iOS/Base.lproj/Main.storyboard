@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gsd-lC-mUk">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gsd-lC-mUk">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,34 +11,60 @@
         <scene sceneID="sws-R3-eCS">
             <objects>
                 <tableViewController id="bsn-dh-IzO" customClass="ViewController" customModule="Beemer_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hbr-lG-gJg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hbr-lG-gJg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="N1p-2m-bda" detailTextLabel="KK3-nx-pBg" style="IBUITableViewCellStyleSubtitle" id="ieJ-lM-y2F">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="ieJ-lM-y2F" customClass="ItemCell" customModule="Beemer_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ieJ-lM-y2F" id="maZ-tf-rfX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N1p-2m-bda">
-                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool ass link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZx-5E-cur">
+                                            <rect key="frame" x="20" y="11" width="291" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KK3-nx-pBg">
-                                            <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/01 10:00 PM" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-qd-2qW">
+                                            <rect key="frame" x="319" y="11" width="75" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="DmD-qd-2qW" secondAttribute="height" multiplier="75:38" id="RoW-E8-yfp"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="gOS-3d-rb6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://medium.com/@kicsipixel/very-simple-view-based-nstableview-in-swift-ab6d7bb30fbb" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64U-sP-0Le">
+                                            <rect key="frame" x="20" y="32" width="291" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gZx-5E-cur" firstAttribute="leading" secondItem="maZ-tf-rfX" secondAttribute="leadingMargin" id="3ty-jO-Fgr"/>
+                                        <constraint firstItem="DmD-qd-2qW" firstAttribute="trailing" secondItem="maZ-tf-rfX" secondAttribute="trailingMargin" id="IBh-U8-X0J"/>
+                                        <constraint firstItem="DmD-qd-2qW" firstAttribute="leading" secondItem="64U-sP-0Le" secondAttribute="trailing" constant="8" symbolic="YES" id="RQb-lB-7he"/>
+                                        <constraint firstItem="gZx-5E-cur" firstAttribute="leading" secondItem="maZ-tf-rfX" secondAttribute="leadingMargin" id="YJq-y2-SnJ"/>
+                                        <constraint firstItem="64U-sP-0Le" firstAttribute="baseline" secondItem="DmD-qd-2qW" secondAttribute="baseline" id="gdW-25-Hhv"/>
+                                        <constraint firstItem="64U-sP-0Le" firstAttribute="bottom" secondItem="maZ-tf-rfX" secondAttribute="bottomMargin" id="lVi-o3-0at"/>
+                                        <constraint firstItem="DmD-qd-2qW" firstAttribute="leading" secondItem="gZx-5E-cur" secondAttribute="trailing" constant="8" id="mCj-Mt-Fuo"/>
+                                        <constraint firstItem="gZx-5E-cur" firstAttribute="top" secondItem="maZ-tf-rfX" secondAttribute="topMargin" id="qQ2-q0-x7a"/>
+                                        <constraint firstItem="gZx-5E-cur" firstAttribute="top" secondItem="DmD-qd-2qW" secondAttribute="top" id="szE-YU-zmK"/>
+                                        <constraint firstItem="gZx-5E-cur" firstAttribute="leading" secondItem="64U-sP-0Le" secondAttribute="leading" id="v1p-I4-dxG"/>
+                                        <constraint firstItem="DmD-qd-2qW" firstAttribute="trailing" secondItem="maZ-tf-rfX" secondAttribute="trailingMargin" id="zy7-5b-eD8"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="atLabel" destination="DmD-qd-2qW" id="Geb-HN-a5d"/>
+                                    <outlet property="messageLabel" destination="gZx-5E-cur" id="UPF-CP-1yR"/>
+                                    <outlet property="urlLabel" destination="64U-sP-0Le" id="V3l-8g-wOT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,11 +72,17 @@
                             <outlet property="delegate" destination="bsn-dh-IzO" id="isL-Yw-imE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="History" id="ZEg-p7-qaw"/>
+                    <navigationItem key="navigationItem" title="History" id="ZEg-p7-qaw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Os3-O5-7qo">
+                            <connections>
+                                <action selector="clearItems" destination="bsn-dh-IzO" id="INJ-sk-hD9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQp-0e-fMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673.91304347826087" y="55.580357142857139"/>
+            <point key="canvasLocation" x="672.46376811594212" y="55.580357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VaS-pc-qdJ">
@@ -72,6 +104,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
