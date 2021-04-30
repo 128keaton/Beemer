@@ -4,7 +4,7 @@
 <dict>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_beemer._udp</string>
+		<string>_beemer._tcp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>To discover local Beemer machines on the network</string>

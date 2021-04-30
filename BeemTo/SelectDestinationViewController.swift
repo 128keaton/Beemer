@@ -57,7 +57,7 @@ class SelectDestinationViewController: UITableViewController, URLSessionDelegate
     
     private func formatName(endpoint: NWEndpoint?) -> String? {
         if let endpoint = endpoint {
-            return "\(endpoint)".replacingOccurrences(of: "._beemer._udplocal.", with: "")
+            return "\(endpoint)".replacingOccurrences(of: "._beemer._tcplocal.", with: "")
         }
         
         return nil
