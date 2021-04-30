@@ -233,7 +233,7 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
     }
 
     private func formatName(endpoint: NWEndpoint) -> String {
-        return "\(endpoint)".replacingOccurrences(of: "._beemer._udplocal.", with: "")
+        return "\(endpoint)".replacingOccurrences(of: "._beemer._tcplocal.", with: "")
     }
 }
 

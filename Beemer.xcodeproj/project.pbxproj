@@ -18,6 +18,9 @@
 		8A1A6BB12628ADDD00270720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6BB02628ADDD00270720 /* Assets.xcassets */; };
 		8A1A6BB42628ADDD00270720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A6BB22628ADDD00270720 /* Main.storyboard */; };
 		8A29A86B263A31250093276A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29A86A263A31250093276A /* ItemCell.swift */; };
+		8A29A86D263ABFA70093276A /* NWParams+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29A86C263ABFA70093276A /* NWParams+Extensions.swift */; };
+		8A29A86E263ABFA70093276A /* NWParams+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29A86C263ABFA70093276A /* NWParams+Extensions.swift */; };
+		8A29A86F263ABFA70093276A /* NWParams+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29A86C263ABFA70093276A /* NWParams+Extensions.swift */; };
 		8A621D34263766B200EB5942 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A621D33263766B200EB5942 /* ShareViewController.swift */; };
 		8A621D37263766B200EB5942 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A621D35263766B200EB5942 /* MainInterface.storyboard */; };
 		8A621D3B263766B200EB5942 /* BeemTo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A621D31263766B200EB5942 /* BeemTo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -82,6 +85,7 @@
 		8A1A6BC22628AE4700270720 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Network.framework; sourceTree = DEVELOPER_DIR; };
 		8A1A6BC82628AFF700270720 /* CocoaAsyncSocket.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaAsyncSocket.xcframework; path = Carthage/Build/CocoaAsyncSocket.xcframework; sourceTree = "<group>"; };
 		8A29A86A263A31250093276A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		8A29A86C263ABFA70093276A /* NWParams+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NWParams+Extensions.swift"; sourceTree = "<group>"; };
 		8A621D2B2637665500EB5942 /* Beemer-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Beemer-iOS.entitlements"; sourceTree = "<group>"; };
 		8A621D31263766B200EB5942 /* BeemTo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BeemTo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A621D33263766B200EB5942 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 				8AE420C72637C52D003F428D /* Browser.swift */,
 				8AE420CA2637C583003F428D /* NetServiceType.swift */,
 				8AE420CE2637CE08003F428D /* Server.swift */,
+				8A29A86C263ABFA70093276A /* NWParams+Extensions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				8AE420CB2637C583003F428D /* NetServiceType.swift in Sources */,
 				8AE420AE26378D3B003F428D /* BeemItem.swift in Sources */,
 				8AE420C82637C52D003F428D /* Browser.swift in Sources */,
+				8A29A86D263ABFA70093276A /* NWParams+Extensions.swift in Sources */,
 				8A1A6B982628ADCA00270720 /* ViewController.swift in Sources */,
 				8A1A6B942628ADCA00270720 /* AppDelegate.swift in Sources */,
 				8AE420AA26378C93003F428D /* Beemer.xcdatamodeld in Sources */,
@@ -370,6 +376,7 @@
 				8AE420D326389C16003F428D /* PinnablePopover.swift in Sources */,
 				8AE420D626389C3B003F428D /* MenuBarManager.swift in Sources */,
 				8A1A6BAF2628ADDC00270720 /* ViewController.swift in Sources */,
+				8A29A86E263ABFA70093276A /* NWParams+Extensions.swift in Sources */,
 				8A1A6BAD2628ADDC00270720 /* AppDelegate.swift in Sources */,
 				8AE420AF26378D3B003F428D /* BeemItem.swift in Sources */,
 				8AE420CF2637CE08003F428D /* Server.swift in Sources */,
@@ -384,6 +391,7 @@
 				8A621D4A26376A3400EB5942 /* SelectDestinationViewController.swift in Sources */,
 				8A621D34263766B200EB5942 /* ShareViewController.swift in Sources */,
 				8AE420C92637C52D003F428D /* Browser.swift in Sources */,
+				8A29A86F263ABFA70093276A /* NWParams+Extensions.swift in Sources */,
 				8AE420B026378D3B003F428D /* BeemItem.swift in Sources */,
 				8AE420CD2637C583003F428D /* NetServiceType.swift in Sources */,
 				8AE420AC26378C93003F428D /* Beemer.xcdatamodeld in Sources */,

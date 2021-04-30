@@ -62,12 +62,7 @@ class Browser: NSObject, NetServiceBrowserDelegate {
 
 
     func establishConnection(with nwEndpoint: NWEndpoint) {
-        let udpOption = NWProtocolUDP.Options()
-        let params = NWParameters(dtls: nil, udp: udpOption)
-        params.includePeerToPeer = true
-
-        // NWConnection(host: "10.0.1.10", port: 60316, using: params)
-        self.currentConnection = NWConnection(to: nwEndpoint, using: params)
+        self.currentConnection = NWConnection(to: nwEndpoint, using: NWParameters(passcode: "abc123"))
         self.currentConnection?.stateUpdateHandler = { newState in
 
             switch newState {

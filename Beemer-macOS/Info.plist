@@ -30,7 +30,7 @@
 	<true/>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_beemer._udp</string>
+		<string>_beemer._tcp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>To discover Beemer clients on the local network</string>

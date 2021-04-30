@@ -7,4 +7,4 @@
 
 import Foundation
 
-var NetServiceType = "_beemer._udp"
+var NetServiceType = "_beemer._tcp"

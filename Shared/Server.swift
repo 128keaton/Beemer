@@ -7,6 +7,7 @@
 
 import Foundation
 import Network
+import CryptoKit
 
 protocol ServerDelegate {
     func itemReceived(item: BeemItem?)
@@ -19,13 +20,10 @@ class Server {
 
     private var listener: NWListener?
     private var currentConnection: NWConnection?
-
+    
     init() {
-        let udpOption = NWProtocolUDP.Options()
-        let params = NWParameters(dtls: nil, udp: udpOption)
-        params.includePeerToPeer = true
 
-        self.listener = try! NWListener(using: params)
+        self.listener = try! NWListener(using: NWParameters(passcode: "abc123"))
 
         self.listener?.service = NWListener.Service(name: Host.current().localizedName!,
             type: NetServiceType)

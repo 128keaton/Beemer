@@ -6,7 +6,7 @@
 	<string>To discover local Beemer machines on the network</string>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_beemer._udp</string>
+		<string>_beemer._tcp</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
