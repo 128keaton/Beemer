@@ -33,7 +33,6 @@ class Server {
             case .ready:
                 if let port = self.listener?.port {
                     print("Listener active on port: \(port)")
-                    print(self.listener)
                     // Listener setup on a port.  Active browsing for this service.
                 }
             case .failed(let error):
